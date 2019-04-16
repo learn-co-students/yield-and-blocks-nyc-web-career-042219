@@ -2,14 +2,12 @@
 def hello_t(array)
   if block_given?
     i = 0
-
     while i<array.length
       yield array[i]
       #the while loops through elems of the array by i, from 0 - length
       #so we will yield the code by i, the indices of the array
       i += 1
     end
-
     array
   else
     puts "Hey! No block was given!"
